@@ -1,6 +1,7 @@
 import math
-import sys
 import argparse
+import os
+from typing import List
 
 def main():
 
@@ -13,10 +14,11 @@ def main():
 
     args = parser.parse_args()
     print(args.hypotenus(args.numbers))
+    print(os.environ.get('DON'))
 
 
 
-def calc_hypotenus(float_lst) -> float:
+def calc_hypotenus(float_lst: List[float]) -> float:
     a, b = float_lst
     c = math.sqrt((a**2)+ (b**2))
     return c
